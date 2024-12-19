@@ -1,0 +1,14 @@
+To enable/disable OpneVPN via SSH
+
+ASUS WRT uses a different format that normal DD WRT and thus below commands should be used when enabling/disabling OpenVPN server in Asus rounters.
+To identify other services, use the debugging tools--> netowrk in he browser console and check the action_script parameter being send.
+
+To Enable OpenVPN Server execute below via SSH:
+
+service start_openvpnd
+service restart_samba
+
+To Disable OpenVPN Server execute below via SSH:
+
+service stop_openvpnd
+service restart_samba
